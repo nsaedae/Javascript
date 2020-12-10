@@ -36,11 +36,14 @@
             height: 100%;
             border: 1px solid green;
         }
+        #tab > article > div:nth-child(1) {background: yellow;}
+        #tab > article > div:nth-child(2) {background: yellowgreen;}
+        #tab > article > div:nth-child(3) {background: wheat;}
+        #tab > article > div:nth-child(4) {background: turquoise;}
 
         #tab > article > div.on {
             display: block;
         }
-
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -67,7 +70,6 @@
 
         // 탭 예제
         $(function(){
-
             var buttons = $('#tab button');
             var divs    = $('#tab > article > div');
 
