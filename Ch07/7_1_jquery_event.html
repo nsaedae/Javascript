@@ -37,6 +37,10 @@
             border: 1px solid green;
         }
 
+        #tab > article > div.on {
+            display: block;
+        }
+
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -61,6 +65,18 @@
             });
         });
 
+        // 탭 예제
+        $(function(){
+
+            var buttons = $('#tab button');
+            var divs    = $('#tab > article > div');
+
+            buttons.click(function(){                
+                var index = $(this).index();               
+                divs.removeClass().eq(index).addClass('on');
+            });
+        });
+
     </script>
 
 </head>
@@ -80,7 +96,7 @@
             <button>4절</button>
         </div>
         <article>
-            <div>
+            <div class="on">
                 <p>
                     동해물과 백두산이 마르고 닳도록<br/>
                     하느님이 보우하사 우리나라 만세<br/>
