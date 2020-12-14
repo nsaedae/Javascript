@@ -7,6 +7,8 @@
     <script>
         $(document).ready(function(){
 
+            var table = $('table');
+
             $('button').click(function(){
 
                 $.ajax({
@@ -16,9 +18,16 @@
                     success: function(data){
                         
                         for(var i=0 ; i<data.length ; i++){
-                            console.log(data[i].name);
-                        }
+                            
+                            table.append('<tr></tr>');
 
+                            table.find('tr').eq(i).append('<td>아이디 : '+data[i].uid+'</td>');
+                            table.find('tr').eq(i).append('<td>이름 : '+data[i].name+'</td>');
+                            table.find('tr').eq(i).append('<td>휴대폰 : '+data[i].hp+'</td>');
+                            table.find('tr').eq(i).append('<td>직급 : '+data[i].pos+'</td>');
+                            table.find('tr').eq(i).append('<td>부서 : '+data[i].dep+'</td>');
+                            table.find('tr').eq(i).append('<td>등록일 : '+data[i].rdate+'</td>');
+                        }
                     }
                 });
             });
