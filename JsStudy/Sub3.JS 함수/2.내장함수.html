@@ -29,11 +29,13 @@
 
         // 타이머 함수
         setTimeout(function(){
-            document.write('3초 후에 실행됨!<br/>');
+            //document.write('3초 후에 실행됨!<br/>');
+            console.log('3초 후에 실행됨!');
         }, 1000*3);
 
         setInterval(function(){
-            document.write('3초 마다 실행됨!<br/>');
+            //document.write('3초 마다 실행됨!<br/>');
+            console.log('3초 마다 실행됨!');
         }, 1000*3);
 
         // 대화상자 함수
@@ -45,6 +47,10 @@
         }else{
             alert('취소를 눌렀습니다.');
         }
+        
+        let data = prompt('데이터 입력 대화상자');
+        alert('입력값 : '+data);
+
     </script>    
 </body>
 </html>
